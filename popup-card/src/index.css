@@ -1,6 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import "tailwindcss";
 
 .geist {
-    font-family: 'Geist', sans-serif;
+  font-family: "Geist", sans-serif;
+}
+:root {
+  --bg-grad-t: #252525;
+  --bg-grad-b: #282828;
+}
+
+.bg-grad-t {
+  --bg-grad-t: var(--bg-grad-t);
+}
+
+.bg-grad-b {
+  --bg-grad-b: var(--bg-grad-b);
+}
+.icon {
+  --size: 24rem;
+  height: var(--size);
+  width: var(--size);
+  border-radius: calc(var(--size) / 3.5);
+
+  --bg-grad-t: #2d4c9f;
+  --bg-grad-b: #5095df;
+
+  background: linear-gradient(to bottom, var(--bg-grad-t), var(--bg-grad-b));
+
+  box-shadow: inset -4px 4px 8px -2px var(--bg-grad-t),
+    inset 4px -4px 8px -2px var(--bg-grad-b), inset 4px 4px 8px -2px #fff,
+    inset -4px -4px 8px -2px #fff;
+
+  &:active {
+    scale: 0.9875;
+    translate: 0 -2px;
+  }
 }
