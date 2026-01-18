@@ -1,10 +1,13 @@
 import React from "react";
-import DashboardCard from "./components/DashboardCard";
+import ConfirmDailog from './components/ConfirmMDailog'
+import "./App.css"
+
+
 const App = () => {
   return (
     <>
-      <div className="w-full h-screen bg-neutral-100 text-black flex justify-center items-center geist">
-        <DashboardCard/>
+      <div className="w-full min-h-screen bg-black text-white flex justify-center items-center geist">
+        <ConfirmDailog/>
       </div>
     </>
   );
