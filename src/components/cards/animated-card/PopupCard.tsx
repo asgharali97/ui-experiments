@@ -1,23 +1,18 @@
 import { IconX, IconPlus } from "@tabler/icons-react";
 import { useState } from "react";
 import { motion } from "motion/react";
-import folder from "../assets/folder.svg";
-import task from "../assets/task.svg";
-import note from "../assets/note.svg";
-import goal from "../assets/goal.svg";
-import bolt from "../assets/bolt.svg";
-import calender from "../assets/calender.svg";
+import folder from "../../../assets/folder.svg";
+import task from "../../../assets/task.svg";
+import note from "../../../assets/note.svg";
+import goal from "../../../assets/goal.svg";
+import bolt from "../../../assets/bolt.svg";
+import calender from "../../../assets/calender.svg";
 
 const PopupCard = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div>
-         <h1
-          className="text-neutral-600 text-lg font-medium text-center my-2"
-          >
-            With Motion
-          </h1>
         {open ? (
           <motion.div
             layoutId="card-container"
@@ -34,7 +29,7 @@ const PopupCard = () => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="w-88 h-74 border border-[#bbbbbb] rounded-3xl flex flex-col shadow-[0_0.2px_4px_rgb(0,0,0,0.2)]"
+            className="w-88 h-74 rounded-3xl flex flex-col shadow-[0_0.2px_4px_rgb(0,0,0,0.2)]"
           >
             <div className="py-3 px-6 flex justify-between items-center rounded-t-3xl">
               <motion.h1
@@ -58,7 +53,7 @@ const PopupCard = () => {
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
-                className="flex justify-center items-center h-7 w-7 rounded-full bg-neutral-400"
+                className="flex justify-center items-center h-7 w-7 rounded-full bg-neutral-400 cursor-pointer"
                 onClick={() => setOpen(!open)}
               >
                 <IconX className="text-white h-5 w-5" />

@@ -1,13 +1,13 @@
 import { IconFilter2 } from "@tabler/icons-react";
 import { ChevronDown } from "lucide-react";
-import dirbble from "../assets/dribble.svg";
-import motion1 from "../assets/motion.svg";
-import youtube from "../assets/youtube.svg";
-import google from "../assets/google.svg";
+import dirbble from "../../../assets/dribble.svg";
+import motion1 from "../../../assets/motion.svg";
+import youtube from "../../../assets/youtube.svg";
+import google from "../../../assets/google.svg";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import FilterSvg from "./FilterSvg";
-import { cn } from "../utils/cn";
+import FilterSvg from "../../FilterSvg";
+import { cn } from "../../../utils/cn";
 
 interface state {
   icon: string | React.ReactElement<React.SVGProps<SVGSVGElement>>;
