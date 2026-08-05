@@ -6,7 +6,7 @@ type Props = {
 
 export default function ComponentList({ items, activeId, onSelect }: Props) {
   return (
-    <div className="w-sm border-r-[0.5px] border-neutral-600 p-4 space-y-2">
+    <div className="w-sm border-r-[0.5px] border-neutral-700 p-4 space-y-2">
       {items.map(item => (
         <button
           key={item.id}
