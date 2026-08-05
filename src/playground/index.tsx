@@ -9,7 +9,7 @@ export default function Playground() {
   const activeItem = registry.find(item => item.id === activeId);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen">
       <ComponentList
         items={registry}
         activeId={activeId}

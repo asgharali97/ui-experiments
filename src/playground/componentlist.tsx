@@ -6,16 +6,16 @@ type Props = {
 
 export default function ComponentList({ items, activeId, onSelect }: Props) {
   return (
-    <div className="w-64 border-r p-4 space-y-2">
+    <div className="w-sm border-r-[0.5px] border-neutral-600 p-4 space-y-2">
       {items.map(item => (
         <button
           key={item.id}
           onClick={() => onSelect(item.id)}
           className={`block w-full text-left px-3 py-2 rounded
-            ${activeId === item.id ? "bg-gray-200" : "hover:bg-gray-100"}`}
+            ${activeId === item.id ? "bg-neutral-500" : "hover:bg-neutral-600"}`}
         >
-          <div className="text-sm font-medium">{item.meta.name}</div>
-          <div className="text-xs text-gray-500">{item.meta.category}</div>
+          <div className="text-sm font-medium text-neutral-200">{item.meta.name}</div>
+          <div className="text-xs text-gray-300">{item.meta.category}</div>
         </button>
       ))}
     </div>

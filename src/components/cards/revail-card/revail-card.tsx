@@ -29,13 +29,13 @@ return (
             duration:0.3
         }}
       className="w-[27rem] h-[37rem] shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] rounded-lg p-6 flex flex-col">
-        <h1 className="font-bold text-xl">Built things that works Fast</h1>
+        <h1 className="font-bold text-xl text-neutral-950">Built things that works Fast</h1>
         <p className="text-neutral-600 mt-2 text-lg">
           Let your users discover and join organizations based on their email
           domain.
         </p>
         <div className="flex justify-center items-center">
-          <button onClick={() => setOpen(!open)} className="py-2 px-4 flex items-center gap-2 cursor-pointer rounded-md mt-6 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]">
+          <button onClick={() => setOpen(!open)} className="py-2 px-4 flex items-center gap-2 cursor-pointer rounded-md mt-6 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] text-neutral-950">
             <img src={react} alt="" className="h-6 w-6" />
             EventShpere
             {

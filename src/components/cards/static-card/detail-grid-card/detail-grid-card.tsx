@@ -8,9 +8,9 @@ import {
 const DetailGridCard = () => {
   return (
     <>
-      <div className="w-md h-[500px] bg-white rounded-4xl p-1 shadow-m">
+      <div className="w-md h-[500px] bg-white rounded-4xl p-1 shadow-sm">
         <div
-          className="w-full h-80 rounded-t-4xl rounded-b-lg flex justify-end items-center relative"
+          className="w-full h-80 rounded-t-[34px] rounded-b-lg flex justify-end items-center relative"
           style={{
             background:
               "linear-gradient(318deg, oklch(0.95 0.02 254.32), transparent)",

@@ -9,9 +9,23 @@ const Glassy = () => {
           <div className="icon mx-4"></div>
         </div>
         <div className="bg-[url('https://www.allianz.com/en/mediacenter/news/reports/250703-nature-on-the-brink-why-a-thriving-planet-matters-for-us-all/_jcr_content/root/parsys/wrapper/wrapper/image_copy_copy.img.82.1280.jpeg/1751523991160/nature-on-the-brink-3b.jpeg')] bg-cover bg-no-repeat h-112 w-md flex justify-center items-center">
-          <div className="h-96 w-96 bg-white/20 backdrop-blur-lg rounded-2xl border-[0.5px] border-white/80 flex justify-center items-center">
-            <div className="bg-white h-94 w-94 rounded-2xl"></div>
+          <div className="h-94 w-94 bg-white/20 backdrop-blur-lg rounded-[20px] border-[0.5px] border-white/80 flex justify-center items-center p-2">
+            <div className="bg-white h-full w-full rounded-[12px]"></div>
           </div>
+        </div>
+        <div className="flex gap-12">
+        <div className="mt-8 border-[0.8px] border-white h-18 w-18 rounded-[14px] p-1">
+          <div className="w-full h-full bg-neutral-200 rounded-[10px] border  ">
+          </div>
+        </div>
+        <div className="mt-8 border-[0.8px] border-white h-18 w-18 rounded-[16px] p-1">
+          <div className="w-full h-full bg-neutral-200 rounded-2xl">
+          </div>
+        </div>
+        <div className="mt-8 border-[0.8px] border-white h-18 w-18 rounded-[14px] p-1">
+          <div className="w-full h-full bg-neutral-200 rounded-md">
+          </div>
+        </div>
         </div>
       </div>
     </>

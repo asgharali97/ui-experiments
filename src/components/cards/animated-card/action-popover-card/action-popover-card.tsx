@@ -1,12 +1,12 @@
 import { IconX, IconPlus } from "@tabler/icons-react";
 import { useState } from "react";
 import { motion } from "motion/react";
-import folder from "../../../assets/folder.svg";
-import task from "../../../assets/task.svg";
-import note from "../../../assets/note.svg";
-import goal from "../../../assets/goal.svg";
-import bolt from "../../../assets/bolt.svg";
-import calender from "../../../assets/calender.svg";
+import folder from "../../../../assets/folder.svg";
+import task from "../../../../assets/task.svg";
+import note from "../../../../assets/note.svg";
+import goal from "../../../../assets/goal.svg";
+import bolt from "../../../../assets/bolt.svg";
+import calender from "../../../../assets/calender.svg";
 
 const ActionPopoverCard = () => {
   const [open, setOpen] = useState(false);

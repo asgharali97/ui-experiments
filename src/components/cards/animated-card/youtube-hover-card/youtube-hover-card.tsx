@@ -144,15 +144,15 @@ const YoutubeHoverCard = () => {
         <div
           key={video.id}
           ref={(el) => (cardsRef.current[i] = el)}
-          className="h-88 relative overflow-hidden rounded-xl cursor-pointer group"
+          className="h-88 relative overflow-hidden rounded-2xl cursor-pointer group"
           onMouseEnter={() => handleHover(i, video.thumbnail, true)}
           onMouseLeave={() => handleHover(i, video.thumbnail, false)}
         >
           <div className="hover-bg absolute inset-0 rounded-xl z-0"></div>
 
-          <div className="relative z-10 p-3">
+          <div className="relative z-10 p-2">
             <img
-              className="rounded-md w-full"
+              className="rounded-lg w-full"
               src={video.thumbnail}
               alt={video.title}
             />
