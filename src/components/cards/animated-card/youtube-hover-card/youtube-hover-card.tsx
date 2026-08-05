@@ -2,7 +2,18 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { FastAverageColor } from "fast-average-color";
 
-const videos = [
+type VideoItem = {
+  id: number;
+  title: string;
+  channel: string;
+  views: string;
+  time: string;
+  duration: string;
+  thumbnail: string;
+  avatar: string;
+};
+
+const videos: VideoItem[] = [
   {
     id: 1,
     title: "Shadcn Just Dropped Game-Changing Components | Update 2025",
@@ -11,11 +22,11 @@ const videos = [
     time: "10 days ago",
     duration: "19:23",
     thumbnail:
-      "https://i9.ytimg.com/vi/c1B0uDAlc7c/hqdefault_custom_3.jpg?sqp=CIif3scG-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAZgEgcFIX8WGYDjxCMM757ucqMUA",
+      "https://i.ytimg.com/vi/BvPQ6381PlQ/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDcAimiCSHrVxIKNEokvAtKsoo2LQ",
     avatar:
       "https://yt3.googleusercontent.com/n7G_or_yexSPKjDYTVLw59w0B7DUTWT3mGln3ghAoGQvFCwkd1lxeQTbCE_hV2q7ASJC3PU3dw=s160-c-k-c0x00ffffff-no-rj",
   },
-   {
+  {
     id: 2,
     title: "Building Workflows with Motia",
     channel: "Piyush Garg",
@@ -39,19 +50,18 @@ const videos = [
     avatar:
       "https://yt3.googleusercontent.com/6tLBV-DRVemxhmanuezR5HkHshX2g7Y46Rq8cysyO1V-nd2SaQ2Fi8cdgVM-n6v_8XZ5BEimxXI=s160-c-k-c0x00ffffff-no-rj",
   },
- 
 ];
 
-
 const YoutubeHoverCard = () => {
-  const cardsRef = useRef([]);
-  const fac = new FastAverageColor();
-  const defaultTint = "rgba(255,255,255,0.2)"; 
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const fac = useRef(new FastAverageColor());
+  const defaultTint = "rgba(255,255,255,0.2)";
 
-  const handleHover = (index, imgUrl, enter) => {
+  const handleHover = (index: number, imgUrl: string, enter: boolean) => {
     const card = cardsRef.current[index];
     if (!card) return;
-    const bg = card.querySelector(".hover-bg");
+    const bg = card.querySelector<HTMLDivElement>(".hover-bg");
+    if (!bg) return;
     bg.style.transformOrigin = "center center";
     bg.style.transition = "none";
     bg.style.willChange = "opacity, transform";
@@ -92,7 +102,7 @@ const YoutubeHoverCard = () => {
         },
         "-=0.18"
       );
-      fac
+      fac.current
         .getColorAsync(imgUrl)
         .then((color) => {
           gsap.to(bg, {
@@ -102,7 +112,7 @@ const YoutubeHoverCard = () => {
           });
         })
         .catch(() => {
-         
+          /* ignore color extraction failures */
         });
     } else {
       const tl = gsap.timeline({
@@ -143,7 +153,9 @@ const YoutubeHoverCard = () => {
       {videos.map((video, i) => (
         <div
           key={video.id}
-          ref={(el) => (cardsRef.current[i] = el)}
+          ref={(el) => {
+            cardsRef.current[i] = el;
+          }}
           className="h-88 relative overflow-hidden rounded-2xl cursor-pointer group"
           onMouseEnter={() => handleHover(i, video.thumbnail, true)}
           onMouseLeave={() => handleHover(i, video.thumbnail, false)}
@@ -168,7 +180,7 @@ const YoutubeHoverCard = () => {
                 </h3>
                 <h4 className="font-normal">{video.channel}</h4>
                 <div className="flex gap-4 items-center text-gray-300">
-                  <h4>{video.views}</h4> <h4>{video.uploaded}</h4>
+                  <h4>{video.views}</h4> <h4>{video.time}</h4>
                 </div>
               </div>
             </div>

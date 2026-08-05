@@ -11,7 +11,7 @@ import { cn } from "../../../../utils/cn";
 
 
 interface state {
-  icon: string | React.ReactElement<React.SVGProps<SVGSVGElement>>;
+  icon: string;
   name: string;
   revune: string;
   growth: number;

@@ -1,9 +1,8 @@
 import { IconArrowRight, IconChevronRight } from "@tabler/icons-react";
-import { animate } from "motion";
 import { motion } from "motion/react";
-import { useState } from "react";
 
 const redailFillButton = () => {
+
   const buttonVaritent = {
     initial: {
       opacity: 0,
@@ -15,7 +14,7 @@ const redailFillButton = () => {
     },
     transition: {
       delay: 0.3,
-      ease: "easeInOut",
+      ease: "easeInOut" as any,
     },
     hover: {},
   };
@@ -26,7 +25,7 @@ const redailFillButton = () => {
       width: "100%",
       transition: {
         delay: 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as any,
       },
     },
   };
@@ -38,7 +37,7 @@ const redailFillButton = () => {
     hover: {
       opacity: 0,
       x: -10,
-      transition: { duration: 0.3,delay:0.3, ease: "easeInOut" },
+      transition: { duration: 0.3,delay:0.3, ease: "easeInOut" as any },
     },
   };
   const arrowVariants = {
@@ -47,7 +46,7 @@ const redailFillButton = () => {
       opacity: 1,
       filter: "blur(0px)",
       x: 10,
-      transition: { duration: 0.2, delay:0.3, ease: "easeInOut" },
+      transition: { duration: 0.2, delay:0.3, ease: "easeInOut" as any },
     },
   };
   const ArrowVariants = motion(IconArrowRight);
@@ -60,7 +59,7 @@ const redailFillButton = () => {
       transition: {
         duration: 0.2,
         delay: 0.28,
-        ease: "easeInOut",
+        ease: "easeInOut" as any,
       },
     },
   };
@@ -71,7 +70,6 @@ const redailFillButton = () => {
           variants={buttonVaritent}
           initial="initial"
           animate="animate"
-          transition="trasition"
           whileHover="hover"
           className="flex gap-2 w-48 rounded-full text-lg font-medium border border-neutral-200 text-neutral-600 cursor-pointer relative"
         >

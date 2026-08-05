@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IconChevronRight, IconX } from "@tabler/icons-react";
-import { motion, stagger } from "motion/react";
+import { motion } from "motion/react";
 
 interface cardType {
   id: number;
@@ -46,16 +46,16 @@ const Card = () => {
     },
   ];
   const barVariants = {
-    animate: (custom) => ({
+    animate: (custom: number) => ({
       scaleY: [1, 0.5, 1.2, 0.7, 1],
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as any,
         delay: custom * 0.1,
       },
     }),
-  };
+  } as const;
 
   return (
     <>

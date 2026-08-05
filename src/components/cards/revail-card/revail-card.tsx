@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import react from "../../../assets/react.svg";
 import { IconX, IconPointerCode,IconAirBalloonFilled,IconApps,IconBrandSwift, IconPlus, } from "@tabler/icons-react";

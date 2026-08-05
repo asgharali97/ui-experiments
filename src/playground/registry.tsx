@@ -22,9 +22,6 @@ import { meta as revailCardMeta } from '../components/cards/revail-card/meta'
 import DetailGridCard from '../components/cards/static-card/detail-grid-card/detail-grid-card'
 import { meta as detailGridCardMeta } from '../components/cards/static-card/detail-grid-card/meta'
 
-import Glassy from '../components/experiments/Glassy'
-import { meta as glassyMeta } from '../components/experiments/meta'
-import BorderRadiBox from "../components/experiments/BorderRadiBox";
 
 export const registry = [
   {

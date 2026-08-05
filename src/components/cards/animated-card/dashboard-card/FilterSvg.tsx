@@ -1,5 +1,4 @@
-import React from "react";
-import { motion, AnimatePresence, cubicBezier } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 
 const FilterSvg = ({
@@ -9,8 +8,7 @@ const FilterSvg = ({
   open: boolean;
   handleToggle: () => void;
 }) => {
-  const easing = cubicBezier(0.35, 0.17, 0.3, 0.86);
-  const easedProgress = easing(0.5);
+
   return (
     <>
       <div
